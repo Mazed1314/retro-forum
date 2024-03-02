@@ -25,6 +25,13 @@
         font-optical-sizing: auto;
         font-style: normal;
       }
+      .bg-img {
+        background-image: url(images/bgbanner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
     </style>
     <!-- font-awesome cdn link -->
     <link
@@ -58,19 +65,31 @@
             tabindex="0"
             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 gap-2"
           >
-            <a href="#" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href="#"
+              data-tip="Home"
+              class="border p-2 rounded-full bg-slate-50 tooltip tooltip-right"
               ><i class="fa-solid fa-house text-2xl text-slate-400"></i
             ></a>
 
-            <a href="#" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href="#"
+              data-tip="Edit"
+              class="border p-2 rounded-full bg-slate-50 tooltip tooltip-right"
               ><i class="fa-solid fa-pen text-2xl text-slate-400"></i
             ></a>
 
-            <a href="#" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href="#"
+              data-tip="Add"
+              class="border p-2 rounded-full bg-slate-50 tooltip tooltip-right"
               ><i class="fa-solid fa-user-plus text-2xl text-slate-400"></i
             ></a>
 
-            <a title="Brand" href="" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href=""
+              data-tip="Brand"
+              class="border p-2 rounded-full bg-slate-50 tooltip tooltip-right"
               ><i class="fa-regular fa-flag text-2xl text-slate-400"></i
             ></a>
           </div>
@@ -79,27 +98,119 @@
 
         <div class="flex gap-2">
           <div class="hidden lg:flex gap-2">
-            <a href="#" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href="#"
+              class="border p-2 rounded-full bg-slate-50 tooltip"
+              data-tip="Home"
               ><i class="fa-solid fa-house text-2xl text-slate-400"></i
             ></a>
-            <a href="#" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href="#"
+              class="border p-2 rounded-full bg-slate-50 tooltip"
+              data-tip="Edit"
               ><i class="fa-solid fa-pen text-2xl text-slate-400"></i
             ></a>
-            <a href="#" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href="#"
+              class="border p-2 rounded-full bg-slate-50 tooltip"
+              data-tip="Add"
               ><i class="fa-solid fa-user-plus text-2xl text-slate-400"></i
             ></a>
-            <a title="Brand" href="" class="border p-2 rounded-full bg-slate-50"
+            <a
+              href=""
+              class="border p-2 rounded-full bg-slate-50 tooltip"
+              data-tip="Brand"
               ><i class="fa-regular fa-flag text-2xl text-slate-400"></i
             ></a>
           </div>
-          <a class="btn rounded-full bg-violet-400 md:w-28 text-white"
+          <a class="btn rounded-full bg-indigo-400 md:w-28 text-white"
             >Sign In</a
           >
         </div>
       </div>
+
+      <!-- hero section -->
+
+      <div class="hero md:min-h-screen rounded-3xl bg-indigo-950 mb-20">
+        <div class="hero-content flex-col lg:flex-row bg-img px-0 md:px-20">
+          <div class="p-4 md:flex md:flex-col-reverse">
+            <label
+              class="input input-bordered flex items-center gap-2 rounded-full mb-4"
+            >
+              <input type="text" class="grow w-28" placeholder="Search" />
+              <span class="badge bg-indigo-400 btn btn-sm rounded-full"
+                ><a href="#" class="text-white">Search</a></span
+              >
+            </label>
+            <div class="">
+              <h1 class="text-3xl md:text-5xl font-black text-white">
+                Welcome to the <br /><span
+                  class="bg-gradient-to-r from-indigo-400 to-indigo-800 bg-clip-text text-transparent"
+                  >ReTro</span
+                >
+                Forum
+              </h1>
+              <p class="py-6 text-slate-100 text-sm">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. In deleniti eaque aut
+                repudiandae et a id nisi.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-8/12 md:w-96 md:h-32 text-base font-medium rounded-2xl shadow-2xl bg-white p-4"
+          >
+            <div class="flex justify-between">
+              <h2>Registered Users</h2>
+              <span>100</span>
+            </div>
+            <div class="flex justify-between">
+              <h2>Forum</h2>
+              <span>05</span>
+            </div>
+            <div class="flex justify-between">
+              <h2>Topics</h2>
+              <span>10</span>
+            </div>
+            <div class="flex justify-between">
+              <h2>Replies</h2>
+              <span>41</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main></main>
-    <footer></footer>
+    <footer>
+      <section1
+        class="footer footer-center p-8 md:py-10 md:px-40 bg-base-200 text-base-content rounded"
+      >
+        <div>
+          <h2 class="font-black text-4xl">ReTro</h2>
+        </div>
+        <div>
+          <p>
+            Publishing digital magazines offers your readers a wonderful
+            collection of carefully ordered magazine pages. You can guide your
+            readers through the content of the magazine because of its
+            chronological order of pages.
+          </p>
+        </div>
+        <div class="grid grid-flow-col gap-4 my-2">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </section1>
+      <section2
+        class="footer footer-center p-4 text-base-content border-t-2 border-dotted my-2 md:px-20"
+      >
+        <aside>
+          <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+        </aside>
+      </section2>
+    </footer>
   </body>
   <!-- script link-->
   <script src="script.js"></script>
