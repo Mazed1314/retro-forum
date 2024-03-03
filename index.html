@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Forum</title>
+    <link
+      rel="shortcut icon"
+      href="images/clever-moxie-meta-logo.png"
+      class="rounded-full"
+      type="image/x-icon"
+    />
+    <title>clever-moxie</title>
     <!-- daisy UI and Tailwind -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -43,7 +49,7 @@
     <header class="px-4 md:px-20">
       <!-- navbar -->
 
-      <div class="navbar bg-base-100 md:my-12 flex justify-between">
+      <div class="navbar bg-base-100 my-6 md:my-12 flex justify-between">
         <div class="dropdown md:hidden">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
             <svg
@@ -94,9 +100,13 @@
             ></a>
           </div>
         </div>
-        <a class="btn btn-ghost font-black text-4xl"
-          ><img src="images/logo.png" alt="" srcset=""
-        /></a>
+        <span
+          ><img
+            src="images/clever-moxie-logo.png"
+            class="w-40 h-20"
+            alt=""
+            srcset=""
+        /></span>
 
         <div class="flex gap-2">
           <div class="hidden lg:flex gap-2">
@@ -137,9 +147,9 @@
         <div class="hero-content flex-col lg:flex-row bg-img px-0 md:px-20">
           <div class="p-4 md:flex md:flex-col-reverse">
             <label
-              class="input input-bordered flex items-center gap-2 rounded-full mb-4"
+              class="input md:w-7/12 input-bordered flex items-center gap-2 rounded-full mb-4"
             >
-              <input type="text" class="grow w-28" placeholder="Search" />
+              <input type="text" class="grow w-full" placeholder="Search" />
               <span class="badge bg-indigo-400 btn btn-sm rounded-full"
                 ><a href="#" class="text-white">Search</a></span
               >
@@ -148,7 +158,7 @@
               <h1 class="text-3xl md:text-5xl font-black text-white">
                 Welcome to the <br /><span
                   class="bg-gradient-to-r from-indigo-400 to-indigo-800 bg-clip-text text-transparent"
-                  >ReTro</span
+                  >Clever-Moxie</span
                 >
                 Forum
               </h1>
@@ -195,14 +205,15 @@
         </div>
         <div class="flex flex-col gap-4 md:flex-row">
           <div
+            id="all-card-container"
             class="md:w-8/12 flex flex-col gap-4 justify-between md:justify-start"
           >
-            <div
+            <!-- <div
               class="w-full flex gap-4 p-6 bg-gray-100 border border-gray-300 rounded-2xl shadow"
             >
               <div class="">
                 <div class="indicator">
-                  <span class="indicator-item badge badge-secondary"></span>
+                  <span class="indicator-item badge bg-green-600"></span>
                   <div
                     class="grid w-12 h-12 bg-white place-items-center rounded-lg"
                   ></div>
@@ -239,28 +250,30 @@
                   </div>
                   <a
                     href="#"
-                    class="bg-green-600 text-white p-2 m-2 rounded-full"
+                    class="bg-green-600 text-white px-4 py-2 m-2 rounded-full"
                     ><i class="fa-solid fa-envelope-open"></i
                   ></a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
-          <div class="bg-base-200 md:w-5/12 rounded-2xl p-4 h-min">
+          <div
+            id="add-read-count"
+            class="bg-base-200 md:w-5/12 rounded-2xl p-4 h-min"
+          >
             <div class="flex justify-between">
               <h3>title</h3>
               <span
                 ><i class="fa-solid fa-check-double text-green-600"></i> mark as
-                readspan
-                <span>(5)</span>
+                readspan (<span id="count">0</span>)
               </span>
             </div>
-            <div class="flex flex-col gap-3 my-4">
+            <!-- <div class="flex flex-col gap-3 my-4">
               <div class="bg-white rounded-lg flex justify-between p-2">
                 <h4>10 Kids Unaware of Their Halloween Costume</h4>
                 <p><i class="fa-regular fa-eye"></i><span>1,542</span></p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -309,9 +322,9 @@
           <div
             class="max-w-sm bg-white border border-slate-300 rounded-xl shadow p-4"
           >
-            <a href="#">
+            <a href="#" class="w-40 h-40">
               <img
-                class="rounded-t-lg w-40 h-40"
+                class="rounded-t-lg w-full"
                 src="images/joinforum.png"
                 alt=""
               />
@@ -339,8 +352,10 @@
                   />
                 </div>
                 <div class="flex-1 min-w-0 ms-4">
-                  <p class="text-sm font-medium truncate">Thomes Lean</p>
-                  <p class="text-sm truncate">email@windster.com</p>
+                  <p class="text-sm font-extrabold truncate">Thomes Lean</p>
+                  <p class="text-sm truncate text-gray-700">
+                    email@windster.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -353,7 +368,7 @@
         class="footer footer-center p-8 md:py-10 md:px-40 text-base-content rounded"
       >
         <div>
-          <h2 class="font-black text-4xl">ReTro</h2>
+          <h2 class="font-black text-4xl">Clever-Moxie</h2>
         </div>
         <div>
           <p>
