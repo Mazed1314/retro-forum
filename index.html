@@ -151,7 +151,9 @@
             >
               <input type="text" class="grow w-full" placeholder="Search" />
               <span class="badge bg-indigo-400 btn btn-sm rounded-full"
-                ><a href="#" class="text-white">Search</a></span
+                ><a href="#" onclick="searchCategory()" class="text-white"
+                  >Search</a
+                ></span
               >
             </label>
             <div class="">
@@ -318,8 +320,11 @@
             app. The integrated testing features allow for a streamlined .
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div
+        <div
+          id="latest-category-container"
+          class="grid grid-cols-1 md:grid-cols-3 gap-4"
+        >
+          <!-- <div
             class="max-w-sm bg-white border border-slate-300 rounded-xl shadow p-4"
           >
             <a href="#" class="w-40 h-40">
@@ -359,7 +364,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
