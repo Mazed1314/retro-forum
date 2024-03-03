@@ -59,30 +59,36 @@ const loadData = async () => {
                   <a
 
                     onclick="readCount()"
-                    class="bg-green-600 text-white px-4 py-2 m-2 rounded-full"
+                    class="read-btn bg-green-600 text-white px-4 py-2 m-2 rounded-full"
                     ><i class="fa-solid fa-envelope-open"></i
                   ></a>
                 </div>
               </div>
             </div>`;
     allCardContainer.appendChild(newCard);
+
+    const readBtn = document.querySelectorAll(".read-btn");
+    for (const btn of readBtn) {
+      btn.addEventListener("click", function () {
+        count = count + 1;
+        const addCount = document.getElementById("add-read-count");
+        const read = document.getElementById("count");
+        const div = document.createElement("div");
+        div.innerHTML = `
+            <div class="flex flex-col gap-3 my-4">
+                <div class="bg-white rounded-lg flex justify-between p-2">
+                    <h4>${item.title}</h4>
+                    <p><i class="fa-regular fa-eye"></i><span>${item.view_count}</span></p>
+                </div>
+            </div>`;
+        read.innerText = count;
+        addCount.appendChild(div);
+      });
+    }
   });
 };
 
 loadData();
-function readCount() {
-  const addCount = document.getElementById("add-read-count");
-  const div = document.createElement("div");
-  div.innerHTML = `
-    <div class="flex flex-col gap-3 my-4">
-        <div class="bg-white rounded-lg flex justify-between p-2">
-            <h4>title</h4>
-            <p><i class="fa-regular fa-eye"></i><span>453</span></p>
-        </div>
-    </div>`;
-
-  addCount.appendChild(div);
-}
 
 // -----------------------------------------------latestData function-------------------------------------------------------
 
@@ -91,10 +97,10 @@ const latestData = async () => {
     "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
 
   data.forEach((item) => {
-    console.log(item);
+    // console.log(item);
     const latestCategoryContainer = document.getElementById(
       "latest-category-container"
     );
