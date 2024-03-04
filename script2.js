@@ -1,3 +1,5 @@
+// ----------------------------------searchbar function -------------------------------------------
+
 const loadDataByCat = async (catId) => {
   console.log(catId);
   const res = await fetch(
@@ -108,14 +110,9 @@ function searchByCat() {
     alert("Please enter a valid category name");
   }
 }
-// setTimeout(() => {
-//   console.log("lazy login");
-// }, 2000);
-
 function showSpinner() {
   document.getElementById("spinner").style.display = "block";
 }
-
 function hideSpinner() {
   document.getElementById("spinner").style.display = "none";
 }
