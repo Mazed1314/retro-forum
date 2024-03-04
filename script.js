@@ -19,7 +19,7 @@ const loadData = async () => {
                           class="w-full flex gap-4 p-6 bg-gray-100 border border-gray-300 rounded-2xl shadow-lg"
                         >
                           <div class="">
-                            <div class="indicator">
+                            <div class="indicator hidden md:block">
                                 ${indicator}
                               <div
                                 class="grid w-12 h-12 bg-white place-items-center"
@@ -28,6 +28,12 @@ const loadData = async () => {
                           </div>
                           <div class="w-11/12">
                             <div class="flex gap-4">
+                            <div class="indicator md:hidden ">
+                                ${indicator}
+                              <div
+                                class="grid w-12 h-12 bg-white place-items-center"
+                              ><img src="${item.image}" class="rounded-lg" alt="" /></div>
+                            </div>
                               <p>#${item.category}</p>
                               <p>author: <span>${item.author.name}</span></p>
                             </div>
