@@ -67,15 +67,22 @@ const loadData = async () => {
   });
   const readBtn = document.querySelectorAll(".read-btn");
   for (const btn of readBtn) {
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (e) {
+      let title =
+        e.target.parentNode.parentNode.parentNode.children[1].children[0]
+          .innerText;
+      let view =
+        e.target.parentNode.parentNode.children[0].children[1].children[1]
+          .innerText;
+
       const addCount = document.getElementById("add-read-count");
       const read = document.getElementById("count");
       const div = document.createElement("div");
       data.posts.forEach((item) => {
         div.innerHTML = `<div class="flex flex-col gap-3 my-4 shadow-md">
             <div class="bg-white rounded-lg flex justify-between p-2">
-              <h4 class=" font-bold ">${item.title}</h4>
-              <p><i class="fa-regular fa-eye"></i><span> ${item.view_count}</span></p>
+              <h4 class=" font-bold ">${title}</h4>
+              <p><i class="fa-regular fa-eye"></i><span> ${view}</span></p>
             </div>
           </div>`;
       });

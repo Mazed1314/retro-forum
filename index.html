@@ -156,7 +156,7 @@
                 placeholder="Search"
               />
               <span class="badge bg-indigo-400 btn btn-sm rounded-full"
-                ><a id="bbtn" class="text-white">Search</a></span
+                ><a onclick="searchByCat()" class="text-white">Search</a></span
               >
             </label>
             <div class="">
@@ -264,13 +264,13 @@
           </div>
           <div
             id="add-read-count"
-            class="bg-base-200 md:w-5/12 rounded-2xl p-4 h-min"
+            class="bg-base-200 md:w-5/12 rounded-2xl p-4 h-min border"
           >
             <div class="flex justify-between">
               <h3>title</h3>
               <span
                 ><i class="fa-solid fa-check-double text-green-600"></i> mark as
-                read (<span id="count">0</span>)
+                read ( <span id="count">0</span> )
               </span>
             </div>
             <!-- <div class="flex flex-col gap-3 my-4">
@@ -402,4 +402,5 @@
   </body>
   <!-- script link-->
   <script src="script.js"></script>
+  <script src="script2.js"></script>
 </html>
