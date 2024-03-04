@@ -99,8 +99,23 @@ const loadDataByCat = async (catId) => {
 function searchByCat() {
   const value = document.getElementById("search-value").value;
   if (value) {
-    loadDataByCat(value);
+    showSpinner();
+    setTimeout(function () {
+      hideSpinner();
+      loadDataByCat(value);
+    }, 2000);
   } else {
     alert("Please enter a valid category name");
   }
+}
+// setTimeout(() => {
+//   console.log("lazy login");
+// }, 2000);
+
+function showSpinner() {
+  document.getElementById("spinner").style.display = "block";
+}
+
+function hideSpinner() {
+  document.getElementById("spinner").style.display = "none";
 }
