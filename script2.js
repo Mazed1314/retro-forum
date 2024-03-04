@@ -19,7 +19,7 @@ const loadDataByCat = async (catId) => {
     }
 
     newCard.innerHTML = `<div
-                            class="w-full flex gap-4 p-6 bg-gray-100 border border-gray-300 rounded-2xl shadow-lg"
+                            class="w-full flex gap-4 py-4 md:p-6 bg-gray-100 border border-gray-300 rounded-2xl shadow-lg"
                           >
                             <div class="">
                               <div class="indicator hidden md:block">
