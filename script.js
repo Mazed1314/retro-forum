@@ -66,26 +66,25 @@ const loadData = async () => {
               </div>
             </div>`;
     allCardContainer.appendChild(newCard);
-
-    const readBtn = document.querySelectorAll(".read-btn");
-    for (const btn of readBtn) {
-      btn.addEventListener("click", function () {
-        count = count + 1;
-        const addCount = document.getElementById("add-read-count");
-        const read = document.getElementById("count");
-        const div = document.createElement("div");
-        div.innerHTML = `
+  });
+  const readBtn = document.querySelectorAll(".read-btn");
+  for (const btn of readBtn) {
+    btn.addEventListener("click", function () {
+      count = count + 1;
+      const addCount = document.getElementById("add-read-count");
+      const read = document.getElementById("count");
+      const div = document.createElement("div");
+      div.innerHTML = `
             <div class="flex flex-col gap-3 my-4">
                 <div class="bg-white rounded-lg flex justify-between p-2">
-                    <h4>${item.title}</h4>
-                    <p><i class="fa-regular fa-eye"></i><span>${item.view_count}</span></p>
+                    <h4>${data.posts.title}</h4>
+                    <p><i class="fa-regular fa-eye"></i><span>${data.posts.view_count}</span></p>
                 </div>
             </div>`;
-        read.innerText = count;
-        addCount.appendChild(div);
-      });
-    }
-  });
+      read.innerText = count;
+      addCount.appendChild(div);
+    });
+  }
 };
 
 loadData();
